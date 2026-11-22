@@ -29,3 +29,9 @@ class EntryPayload(BaseModel):
 class ActionPayload(BaseModel):
     action: str
     remark: str | None = None
+
+
+class ImpactSamplePayload(BaseModel):
+    source: str | None = None
+    exclude: list[str] | str | None = None
+    sync_quality: bool = True
